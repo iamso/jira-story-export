@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jira Stories</title>
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css" crossorigin="anonymous">
+
+  <style>
+    body {
+      padding-top: 2rem;
+    }
+
+    hr {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    h1,
+    h2 {
+      position: relative;
+    }
+    h1 .heading-anchor,
+    h2 .heading-anchor {
+      /* color: inherit; */
+      font-size: inherit;
+      font-weight: 700;
+      font-style: italic;
+      line-height: inherit;
+      opacity: 0;
+      padding-right: 10px;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      text-align: right;
+      text-decoration: none;
+    }
+    h1 .heading-anchor:before,
+    h2 .heading-anchor:before {
+      content: '#';
+    }
+    h1:hover .heading-anchor,
+    h2:hover .heading-anchor {
+      opacity: 1;
+    }
+
+    .table-of-contents {
+      font-size: 0.875em;
+      margin-bottom: 2rem;
+    }
+    .table-of-contents:before {
+      background: #eee;
+      border-radius: 0.25rem 0.25rem 0 0;
+      content: 'Table of Contents';
+      display: block;
+      font-weight: 700;
+      padding: 0.3em 1em;
+    }
+    .table-of-contents ul {
+      border: 1px solid #eee;
+      border-radius: 0 0 0.25rem 0.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .table-of-contents ul li {
+      border-bottom: 1px solid #eee;
+      padding: 0.3em 1em;
+    }
+    .table-of-contents ul li:last-child {
+      border: 0;
+    }
+
+    .comment {
+      background: #f8f8f8;
+      border: 1px solid #eee;
+      font-size: 0.875em;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .comment *:last-child {
+      margin-bottom: 0;
+    }
+
+    .attachments ul {
+      border: 1px solid #eee;
+      border-radius: 0.25rem;
+      list-style: none;
+      margin: 0;
+      padding: 0.3em 1em;
+    }
+    .attachments ul li a:before {
+      content: '↓';
+      padding-right: 0.4rem;
+      text-decoration: underline;
+    }
+
+    @media print {
+      .table-of-contents {
+        page-break-after: always;
+      }
+
+      .story {
+        page-break-after: auto;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Jira Stories</h1>
+
+    <%- output %>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "jira-story-export",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Steve Ottoz <so@dev.so>",
+  "license": "DBAD",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "fs-extra": "^6.0.1",
+    "markdown-pdf": "^8.1.1",
+    "mdpdf": "^1.7.0",
+    "moment": "^2.22.2",
+    "motes-md": "^0.6.2",
+    "node-env-file": "^0.1.8",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "rimraf": "^2.6.2"
+  }
+}

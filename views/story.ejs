@@ -1,0 +1,32 @@
+
+:::: story
+
+## <%=key%> <%=title%>
+
+<%-description%>
+
+<% if (comments.length) { %>
+### Comments
+
+  <% for (let comment of comments) { %>
+::: comment
+**[<%=comment.author.name%>](mailto:<%=comment.author.email%>):**
+<%-comment.text%>
+:::
+
+  <% } %>
+<% } %>
+
+<% if (attachments.length) { %>
+### Attachments
+
+::: attachments
+  <% for (let attachment of attachments) { %>
+- [<%=attachment.name%>](<%-attachment.file%>){download=<%=attachment.name%>}
+  <% } %>
+:::
+<% } %>
+
+---
+
+::::
